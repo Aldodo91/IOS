@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C3014532360938200B23398 /* Game3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3014522360938200B23398 /* Game3.swift */; };
+		9C3014552360AB6900B23398 /* Game3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3014542360AB6900B23398 /* Game3.swift */; };
 		9C4DFCE5235AF47B0067645D /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C4DFCE4235AF47B0067645D /* Magic.sks */; };
 		9C6188C12359F7D8005D03D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6188C02359F7D8005D03D0 /* AppDelegate.swift */; };
 		9C6188C32359F7D8005D03D0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C6188C22359F7D8005D03D0 /* GameScene.sks */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C3014522360938200B23398 /* Game3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game3.swift; path = ../../../../Desktop/Game3.swift; sourceTree = "<group>"; };
+		9C3014542360AB6900B23398 /* Game3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3.swift; sourceTree = "<group>"; };
 		9C4DFCE4235AF47B0067645D /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		9C6188BD2359F7D8005D03D0 /* Prj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6188C02359F7D8005D03D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				9C6188C62359F7D8005D03D0 /* GameScene.swift */,
 				9CA23AAB2359F9C700F8A001 /* Game1.swift */,
 				9C8005E1235B10590032B77D /* Game2.swift */,
-				9C3014522360938200B23398 /* Game3.swift */,
+				9C3014542360AB6900B23398 /* Game3.swift */,
 				9C4DFCE4235AF47B0067645D /* Magic.sks */,
 				9C6188C82359F7D8005D03D0 /* GameViewController.swift */,
 				9C6188CA2359F7D8005D03D0 /* Main.storyboard */,
@@ -189,7 +189,7 @@
 			files = (
 				9C8005E2235B10590032B77D /* Game2.swift in Sources */,
 				9C6188C72359F7D8005D03D0 /* GameScene.swift in Sources */,
-				9C3014532360938200B23398 /* Game3.swift in Sources */,
+				9C3014552360AB6900B23398 /* Game3.swift in Sources */,
 				9CA23AAC2359F9C700F8A001 /* Game1.swift in Sources */,
 				9C6188C92359F7D8005D03D0 /* GameViewController.swift in Sources */,
 				9C6188C12359F7D8005D03D0 /* AppDelegate.swift in Sources */,
