@@ -281,7 +281,7 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
         let collisione = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         contact.bodyB.node?.removeFromParent()
         if collisione == cestinoCategoryMask | immCategoryMask{
-            punteggio += 10
+            punteggio += 1
 
         }
     }

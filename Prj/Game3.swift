@@ -230,7 +230,7 @@ class Game3: SKScene, SKPhysicsContactDelegate {
             leftWall = SKShapeNode(rectOf: CGSize(width: 3, height: bFront.frame.height / 1.1))
             leftWall.fillColor = .red
             leftWall.strokeColor = .clear
-            leftWall.position = CGPoint(x: bFront.position.x - bFront.frame.width / 3, y: bFront.position.y)
+            leftWall.position = CGPoint(x: bFront.position.x - bFront.frame.width / 3.2, y: bFront.position.y)
             leftWall.zPosition = 10
             leftWall.alpha = grids ? 1 : 0
         
@@ -351,7 +351,6 @@ class Game3: SKScene, SKPhysicsContactDelegate {
                 self.ball.zPosition = self.bg.zPosition + 2
             })
             
-            // ADD WIND STEVE!
             let windWait = SKAction.wait(forDuration: c.airTime / 4)
             let push = SKAction.applyImpulse(CGVector(dx: wind, dy: 0), duration: 1)
             ball.run(SKAction.sequence([windWait, push]))
@@ -360,7 +359,7 @@ class Game3: SKScene, SKPhysicsContactDelegate {
             // Wait & reset
             let wait4 = SKAction.wait(forDuration: 4)
             let reset = SKAction.run({
-//                self.setWind()
+                self.setWind()
                 self.setBall()
             })
             self.run(SKAction.sequence([wait4,reset]))
