@@ -47,10 +47,10 @@ class Game3: SKScene, SKPhysicsContactDelegate {
     // SKSprites
     var bg = SKSpriteNode(imageNamed: "background")        // background image
     var bFront = SKSpriteNode(imageNamed: "binverde")   // Front portion of the bin
-    var pBall = SKSpriteNode(imageNamed: "bottle")  // Paper Ball skin
+    var pBall = SKSpriteNode(imageNamed: "vetro")  // Paper Ball skin
     
     var orologio = SKSpriteNode(imageNamed: "orologio")
-    var puntiLabel, back, bin2Label : SKLabelNode!
+    var bin2Label : SKLabelNode!
     var font = "Noteworthy"
     
     var btnBack, imm : SKSpriteNode!
@@ -184,34 +184,15 @@ class Game3: SKScene, SKPhysicsContactDelegate {
             bin2Label.position = CGPoint(x: 415, y: 420)
             bin2Label.zPosition = 15
             addChild(bin2Label)
-            
-           // scritta back
-              back = SKLabelNode(text: "Back")
-              back.fontName = font
-              back.fontSize = 32
-              back.fontColor = UIColor.black
-              back.position = CGPoint(x: 154, y: 1685)
-              back.zPosition = bg.zPosition + 1
-              addChild(back)
               
           // bottone back
               btnBack = SKSpriteNode()
-              btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "Untitled"))
+              btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "btnVerde"))
               btnBack.position = CGPoint(x: 78, y: 1707)
               btnBack.size = CGSize(width: 38, height: 72)
               btnBack.zPosition = bg.zPosition + 1
               addChild(btnBack)
             
-            
-        //punteggio
-            puntiLabel = SKLabelNode()
-            puntiLabel.text = "Score: "
-            puntiLabel.fontName = font
-            puntiLabel.position = CGPoint(x: 78, y: 100)
-            puntiLabel.fontSize = 40
-            puntiLabel.fontColor = UIColor.black
-            puntiLabel.zPosition = bg.zPosition + 1
-            addChild(puntiLabel)
             
             // Start ground - make grids true at the top to see these lines
             startG = SKShapeNode(rectOf: CGSize(width: self.frame.width, height: 5))
@@ -268,7 +249,7 @@ class Game3: SKScene, SKPhysicsContactDelegate {
             rightWall = SKShapeNode(rectOf: CGSize(width: 3, height: bFront.frame.height / 1.1))
             rightWall.fillColor = .red
             rightWall.strokeColor = .clear
-            rightWall.position = CGPoint(x: bFront.position.x + bFront.frame.width / 3, y: bFront.position.y)
+            rightWall.position = CGPoint(x: bFront.position.x + bFront.frame.width / 3.2, y: bFront.position.y)
             rightWall.zPosition = 10
             rightWall.alpha = grids ? 1 : 0
             
@@ -298,8 +279,10 @@ class Game3: SKScene, SKPhysicsContactDelegate {
             
             // The wind label
             windLbl.text = "Wind = 0"
-            windLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height * 4 / 5)
-            windLbl.fontSize = self.frame.width / 10
+            windLbl.fontName = font
+            windLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height * 4 / 9.2)
+            windLbl.fontSize = self.frame.width / 15
+            windLbl.fontColor = UIColor.black
             windLbl.zPosition = bg.zPosition + 1
             self.addChild(windLbl)
 

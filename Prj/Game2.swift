@@ -12,7 +12,7 @@ import GameKit
 
 class Game2: SKScene,SKPhysicsContactDelegate {
     var floor, mare, btnBack, marino, reef, bodyMare, cestino, imm, ogg, pause : SKSpriteNode!
-    var nomeCestino, puntiLabel, back, label : SKLabelNode!
+    var nomeCestino, puntiLabel, label : SKLabelNode!
     var timerNemici, timerMare : Timer!
     var indiceMare : Int = 0
     var font = "Noteworthy"
@@ -115,12 +115,6 @@ class Game2: SKScene,SKPhysicsContactDelegate {
         nomeCestino.position = CGPoint(x: 693, y: 875)
         nomeCestino.zPosition = 10
         
-        back = SKLabelNode(text: "Back")
-        back.fontName = font
-        back.fontSize = 32
-        back.fontColor = UIColor.white
-        back.position = CGPoint(x: 154, y: 1685)
-        
         bodyMare = SKSpriteNode()
         bodyMare.color = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
         bodyMare.position = CGPoint(x: 279, y: 500)
@@ -135,7 +129,7 @@ class Game2: SKScene,SKPhysicsContactDelegate {
         
         
         btnBack = SKSpriteNode()
-        btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "Untitled"))
+        btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "backgiallo"))
         btnBack.position = CGPoint(x: 78, y: 1707)
         btnBack.size = CGSize(width: 38, height: 72)
         btnBack.zPosition = 11
@@ -208,7 +202,6 @@ class Game2: SKScene,SKPhysicsContactDelegate {
         addChild(label)
         addChild(pause)
         addChild(nomeCestino)
-        addChild(back)
         addChild(btnBack)
         addChild(mare)
         addChild(floor)
@@ -237,8 +230,8 @@ class Game2: SKScene,SKPhysicsContactDelegate {
         
         imm = SKSpriteNode()
         imm.name = "imm"
-        imm.texture = SKTexture(image: #imageLiteral(resourceName: "garbage")) // TODO non coerente Warning
-        imm.size = CGSize(width: 120, height: 120)
+        imm.texture = SKTexture(image: #imageLiteral(resourceName: "bottigliaplastica")) // TODO non coerente Warning
+        imm.size = CGSize(width: 150, height: 150)
         imm.position = CGPoint(x: randomX.nextInt(), y: randomY.nextInt())
         imm.zPosition = 2
         imm.physicsBody = SKPhysicsBody(circleOfRadius: imm.size.width/2)

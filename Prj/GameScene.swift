@@ -60,11 +60,11 @@ class GameScene: SKScene {
         sfondo.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         sfondo.zPosition = 2
         sfondo.size = self.size
-               
-        gameSelectorLabel = SKLabelNode(text: "Waste Away")
+        
+        gameSelectorLabel = SKLabelNode(text: "WasteAwaY")
         gameSelectorLabel.fontName = font
         gameSelectorLabel.fontSize = 90
-        gameSelectorLabel.fontColor = .brown
+        gameSelectorLabel.fontColor = UIColor(red: 70/255, green: 130/255, blue: 180/255, alpha: 1)
         gameSelectorLabel.position = CGPoint(x: frame.size.width/2, y: 3*frame.size.height/4 + 150)
         gameSelectorLabel.zPosition = sfondo.zPosition+1
 
@@ -81,8 +81,8 @@ class GameScene: SKScene {
         select2.zPosition = sfondo.zPosition+1
                 
         select3 = SKSpriteNode()
-        select3.texture = SKTexture(image: #imageLiteral(resourceName: "Asset 8"))
-        select3.size = CGSize(width: 120, height: 120)
+        select3.texture = SKTexture(image: #imageLiteral(resourceName: "casafoglia"))
+        select3.size = CGSize(width: 150, height: 150)
         select3.position = CGPoint(x: 640, y: 510)
         select3.zPosition = sfondo.zPosition+1
 

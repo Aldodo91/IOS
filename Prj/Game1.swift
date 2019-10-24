@@ -7,7 +7,7 @@ import UIKit
 
 class Game1: SKScene ,SKPhysicsContactDelegate{
     
-    var label, back, puntiLabel  : SKLabelNode!
+    var label, puntiLabel  : SKLabelNode!
     var btnBack, fiore, imm, albero, cestino, floor, nuvola, pause : SKSpriteNode!
     var timerNemici , timerNuvole: Timer!
     var state = 1
@@ -143,21 +143,14 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
         puntiLabel.fontColor = UIColor.black
         puntiLabel.zPosition = floor.zPosition+10
         
-        back = SKLabelNode(text: "Back")
-        back.fontColor = UIColor.black
-        back.fontSize = 32
-        back.position = CGPoint(x: 154, y: 1685)
-        back.fontName = font
-        back.zPosition = puntiLabel.zPosition
-        
         btnBack = SKSpriteNode()
-        btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "Untitled"))
+        btnBack.texture = SKTexture(image: #imageLiteral(resourceName: "backblue"))
         btnBack.position = CGPoint(x: 78, y: 1707)
         btnBack.size = CGSize(width: 38, height: 72)
         btnBack.zPosition = 11
         
         pause = SKSpriteNode()
-        pause.texture = SKTexture(image: #imageLiteral(resourceName: "pause"))
+        pause.texture = SKTexture(image: #imageLiteral(resourceName: "pauseBlue"))
         pause.position = CGPoint(x: 778, y: 1707)
         pause.size = CGSize (width: 38, height: 62)
         pause.zPosition = 11
@@ -188,7 +181,6 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
         addChild(albero)
         addChild(cestino)
         addChild(floor)
-        addChild(back)
         addChild(btnBack)
         addChild(puntiLabel)
         
@@ -202,7 +194,7 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
     
 
     @objc func creaNuvole(){
-        let randomX = GKRandomDistribution(lowestValue: -19, highestValue: 300)
+        let randomX = GKRandomDistribution(lowestValue: -19, highestValue: 30)
         let randomY = GKRandomDistribution(lowestValue: 1050, highestValue: 1750)
         let arrDiNuvole : [UIImage] = [#imageLiteral(resourceName: "Cloud_1"),#imageLiteral(resourceName: "Cloud_2")]
         
@@ -259,6 +251,9 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
             if pause.contains(l){
                 
                 if state == 1 {
+                    for n in children{
+                        if n.name == "imm"{ n.removeFromParent() }
+                    }
                     timerNemici.invalidate()
                     label.isHidden = false
                     state = 0
@@ -286,7 +281,7 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
         let collisione = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         contact.bodyB.node?.removeFromParent()
         if collisione == cestinoCategoryMask | immCategoryMask{
-            punteggio += 1
+            punteggio += 10
 
         }
     }
