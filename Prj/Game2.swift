@@ -45,7 +45,7 @@ class Game2: SKScene,SKPhysicsContactDelegate {
                 let darkMode = SKSpriteNode()
                 darkMode.name = "DarkON"
                 darkMode.color = .black
-                darkMode.alpha = 0.2
+                darkMode.alpha = 0.3
                 darkMode.position = CGPoint(x: self.frame.width, y: self.frame.height)
                 darkMode.size = CGSize(width: 5000, height: 5000)
                 darkMode.zPosition = 20
@@ -271,13 +271,13 @@ class Game2: SKScene,SKPhysicsContactDelegate {
             if pause.contains(l){
                 if state == 1{
                     timerNemici.invalidate()
-                    self.view?.isPaused = true
+//                    self.view?.isPaused = true
                     state = 0
                     label.isHidden = false
                 }
                 else {
                     timerNemici = Timer.scheduledTimer(timeInterval: 2.1 , target: self, selector: #selector(creaNemici), userInfo: nil, repeats: true)
-                    self.view?.isPaused = false
+//                    self.view?.isPaused = false
                     state = 1
                     label.isHidden = true
                 }

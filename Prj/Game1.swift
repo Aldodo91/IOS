@@ -24,7 +24,7 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
                 let darkMode = SKSpriteNode()
                 darkMode.name = "DarkON"
                 darkMode.color = .black
-                darkMode.alpha = 0.2
+                darkMode.alpha = 0.4
                 darkMode.position = CGPoint(x: self.frame.width, y: self.frame.height)
                 darkMode.size = CGSize(width: 5000, height: 5000)
                 darkMode.zPosition = 20
