@@ -260,7 +260,7 @@ class Game1: SKScene ,SKPhysicsContactDelegate{
 //                    self.view?.isPaused = true
                 }
                 else{
-                    timerNemici = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(creaImmondizia), userInfo: nil, repeats: true)
+                    timerNemici = Timer.scheduledTimer(timeInterval: 1.2, target: self, selector: #selector(creaImmondizia), userInfo: nil, repeats: true)
 //                    self.view?.isPaused = false
                     
                     state = 1
